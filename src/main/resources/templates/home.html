@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Day la trang chu</h1>
+<h1>Ho ten la: <label th:text="${hoTen}"></label></h1>
+
+<h1>Thong tin user la</h1>
+<p>id: <lable th:text="${user.id}"></lable></p>
+
+<form action="/login" method="post">
+    <label>email</label>
+    <input type="text" name="email"> <br>
+    <label>password</label>
+    <input type="text" name="pass"><br>
+    <button type="submit">Login</button>
+</form>
+
+</body>
+</html>
