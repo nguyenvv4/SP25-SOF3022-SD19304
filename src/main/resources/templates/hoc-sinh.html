@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>age</td>
+        <td>status</td>
+    </tr>
+    <tbody>
+    <tr th:each="hocSinh: ${list}">
+        <td th:text="${hocSinh.id}"></td>
+        <td th:text="${hocSinh.name}"></td>
+        <td th:text="${hocSinh.age}"></td>
+        <td th:text="${hocSinh.status}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
