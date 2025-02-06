@@ -18,4 +18,14 @@ public class HocSinh {
     private Integer age;
     @Column(name = "status")
     private String status;
+
+    @Override
+    public String toString() {
+        return "HocSinh{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", status='" + status + '\'' +
+                '}';
+    }
 }

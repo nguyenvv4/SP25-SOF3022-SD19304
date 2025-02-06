@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,5 +26,20 @@ public class HocSinhController {
         List<HocSinh> list = hocSinhRepo.findAll();
         model.addAttribute("list", list);
         return "/hoc-sinh.html";
+    }
+
+    @PostMapping("/hoc-sinh/add")
+    public String add(HocSinh hocSinh) {
+        hocSinhRepo.save(hocSinh);
+        return "redirect:/hoc-sinh/hien-thi";
+    }
+
+    @GetMapping("/hoc-sinh/detail/{id}")
+    public String detail(Model model,
+                         @PathVariable("id") Integer id) {
+        // chuyen doi optional -> object => can su dung .get()
+        HocSinh hocSinh = hocSinhRepo.findById(id).get();
+        model.addAttribute("hocSinh", hocSinh);
+        return "detail.html";
     }
 }

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface HocSinhRepo extends JpaRepository<HocSinh, Integer> {
-
+    // truy vấn csdl
     // thường sẽ viết native query hoặc HQL
 }
 // interface =>  bề bên ngoài => khong nhin duoc ben trong no xử lý cái gì
