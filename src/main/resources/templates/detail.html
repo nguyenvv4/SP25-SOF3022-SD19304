@@ -10,7 +10,7 @@
 </head>
 <body class="container">
 
-<form action="#" method="post">
+<form th:action="@{|/hoc-sinh/update/${hocSinh.id}|}" method="post">
     <label>Name</label>
     <input type="text" name="name" th:field="*{hocSinh.name}"> <br>
     <label>Age</label>
@@ -18,7 +18,7 @@
     <label>Status</label>
     <input type="radio" value="Active" name="status" th:field="*{hocSinh.status}"> Active
     <input type="radio" value="Inactive" name="status" th:field="*{hocSinh.status}"> Inactive <br>
-    <button type="submit">Add New</button>
+    <button type="submit">Update</button>
 </form>
 </body>
 </html>

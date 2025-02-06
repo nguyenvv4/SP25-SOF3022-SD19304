@@ -42,4 +42,20 @@ public class HocSinhController {
         model.addAttribute("hocSinh", hocSinh);
         return "detail.html";
     }
+
+    @GetMapping("/hoc-sinh/delete/{id}")
+    public String delete(Model model,
+                         @PathVariable("id") Integer id) {
+        // chuyen doi optional -> object => can su dung .get()
+        hocSinhRepo.deleteById(id);
+        return "redirect:/hoc-sinh/hien-thi";
+    }
+
+    @PostMapping("/hoc-sinh/update/{id}")
+    public String update(Model model,
+                         HocSinh hocSinh) {
+        System.out.println("da chay vao day , id la: " + hocSinh.getId());
+        hocSinhRepo.save(hocSinh);
+        return "redirect:/hoc-sinh/hien-thi";
+    }
 }
