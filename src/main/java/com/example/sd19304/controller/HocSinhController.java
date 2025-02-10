@@ -17,6 +17,8 @@ public class HocSinhController {
     // thong thuogn phai khoi tao thang repo
     // repo r = new repo
     // nhung minh dang dung interface va spring nen repo duoc khoi tao nhu sau
+
+
     @Autowired
     HocSinhRepo hocSinhRepo;
 
