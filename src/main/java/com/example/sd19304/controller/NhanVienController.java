@@ -20,7 +20,7 @@ public class NhanVienController {
     @GetMapping("/nhan-vien")
     public String nhanVien(Model model, Pageable pageable) {
 //        Page<NhanVien> list = nhanVienRepo.findAll(pageable);
-        List<NhanVien> list =nhanVienRepo.findByHoTenNhanVienOrTrangThai("Nguyen Van A","Active");
+        Page<NhanVien> list =nhanVienRepo.findByHoTenNhanVienOrTrangThai("Nguyen Van A","Active",pageable);
         model.addAttribute("list", list);
 
 //        model.addAttribute("list", list.getContent());
