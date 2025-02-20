@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>id</td>
+        <td>ho ten nhan vien</td>
+        <td>dia chi</td>
+        <td>sdt</td>
+        <td>trang thai</td>
+        <td>ngay tao</td>
+        <td>ngay sua</td>
+    </tr>
+    <tr th:each="nhanVien : ${list}">
+        <td th:text="${nhanVien.id}"></td>
+        <td th:text="${nhanVien.hoTenNhanVien}"></td>
+        <td th:text="${nhanVien.diaChi}"></td>
+        <td th:text="${nhanVien.sdt}"></td>
+        <td th:text="${nhanVien.trangThai}"></td>
+        <td th:text="${nhanVien.ngayTao}"></td>
+        <td th:text="${nhanVien.ngaySua}"></td>
+    </tr>
+</table>
+</body>
+</html>
